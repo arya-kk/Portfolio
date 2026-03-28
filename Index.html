@@ -2,224 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta 
-        name="viewport" 
-        content="width=device-width, initial-scale=1.0"
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aryananda K | Portfolio</title>
-    
     <style>
-        /* ========================================
-           GENERAL RESET & CSS VARIABLES
-           ========================================
-        */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        :root {
-            --bg-color: #f8fafc;
-            --card-bg: #ffffff;
-            --text-color: #1e293b;
-            --hero-bg: #f1f5f9;
-            --btn-color: #0ea5e9;
-            --nav-bg: #1e293b;
-            --skill-bg: #e2e8f0;
-        }
-
-        [data-theme="dark"] {
-            --bg-color: #0f172a;
-            --card-bg: #1e293b;
-            --text-color: #f1f5f9;
-            --hero-bg: #111827;
-            --btn-color: #38bdf8;
-            --nav-bg: #000000;
-            --skill-bg: #334155;
-        }
-
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
-            text-align: center;
-        }
-
-        /* ========================================
-           NAVIGATION STYLES
-           ========================================
-        */
-        nav {
-            background-color: var(--nav-bg);
-            padding: 1rem;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        .nav-links {
-            display: flex;
-            justify-content: center;
-            list-style: none;
-        }
-
-        .nav-links li a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 1rem;
-            font-weight: 500;
-            transition: color 0.2s;
-        }
-
-        .nav-links li a:hover {
-            color: var(--btn-color);
-        }
-
-        /* ========================================
-           HERO SECTION
-           ========================================
-        */
-        .hero {
-            padding: 80px 20px;
-            background-color: var(--hero-bg);
-        }
-
-        .profile-img {
-            width: 160px;
-            height: 160px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 5px solid var(--btn-color);
-            margin-bottom: 20px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        h2 {
-            font-size: 1.5rem;
-            color: var(--btn-color);
-            margin-bottom: 1rem;
-        }
-
-        /* ========================================
-           PROJECTS GRID
-           ========================================
-        */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-
-        .project-card {
-            background-color: var(--card-bg);
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .view-btn {
-            background-color: var(--btn-color);
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: 600;
-            display: inline-block;
-            margin-top: 15px;
-        }
-
-        /* ========================================
-           SKILLS SECTION
-           ========================================
-        */
-        .skill-container {
-            padding: 40px 20px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .skill-tag {
-            display: inline-block;
-            background: var(--skill-bg);
-            padding: 8px 18px;
-            margin: 6px;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 0.9rem;
-        }
-
-        /* ========================================
-           UI ELEMENTS (Toggle & Footer)
-           ========================================
-        */
-        #theme-toggle {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 55px;
-            height: 55px;
-            border-radius: 50%;
-            background-color: var(--btn-color);
-            color: white;
-            border: none;
-            cursor: pointer;
-            font-size: 1.4rem;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-            z-index: 1001;
-        }
-
-        footer {
-            padding: 60px 20px;
-            background-color: var(--hero-bg);
-            margin-top: 50px;
-        }
-
-        .contact-links a {
-            display: block;
-            margin: 10px 0;
-            color: var(--btn-color);
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        /* ========================================
-           MEDIA QUERIES
-           ========================================
-        */
-        @media (max-width: 600px) {
-            .nav-links li a {
-                margin: 0 8px;
-                font-size: 0.9rem;
-            }
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; transition: 0.3s; }
+        html { scroll-behavior: smooth; }
+        :root { --bg: #f8fafc; --card: #fff; --text: #1e293b; --hero: #f1f5f9; --btn: #0ea5e9; --nav: #1e293b; --skill: #e2e8f0; }
+        [data-theme="dark"] { --bg: #0f172a; --card: #1e293b; --text: #f1f5f9; --hero: #111827; --btn: #38bdf8; --nav: #000; --skill: #334155; }
+        body { background: var(--bg); color: var(--text); line-height: 1.6; text-align: center; }
+        nav { background: var(--nav); padding: 1rem; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .nav-links { display: flex; justify-content: center; list-style: none; }
+        .nav-links li a { color: white; text-decoration: none; margin: 0 15px; font-weight: 500; }
+        .nav-links li a:hover { color: var(--btn); }
+        .hero { padding: 80px 20px; background: var(--hero); }
+        .profile-img { width: 160px; height: 160px; border-radius: 50%; object-fit: cover; border: 5px solid var(--btn); margin-bottom: 20px; }
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 1.5rem; color: var(--btn); margin: 10px 0; }
+        .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
+        .project-card { background: var(--card); padding: 30px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .project-card:hover { transform: translateY(-5px); }
+        .view-btn { background: var(--btn); color: #fff; padding: 10px 20px; text-decoration: none; border-radius: 8px; font-weight: 600; display: inline-block; margin-top: 15px; }
+        .skill-container { padding: 40px 20px; max-width: 800px; margin: 0 auto; }
+        .skill-tag { display: inline-block; background: var(--skill); padding: 8px 18px; margin: 6px; border-radius: 50px; font-weight: 600; font-size: 0.9rem; }
+        #theme-toggle { position: fixed; bottom: 30px; right: 30px; width: 55px; height: 55px; border-radius: 50%; background: var(--btn); color: #fff; border: none; cursor: pointer; font-size: 1.4rem; z-index: 1001; }
+        footer { padding: 60px 20px; background: var(--hero); margin-top: 50px; }
+        .contact-links a { display: block; margin: 10px 0; color: var(--btn); text-decoration: none; font-weight: bold; }
+        @media (max-width: 600px) { .nav-links li a { margin: 0 8px; font-size: 0.9rem; } }
     </style>
 </head>
 <body>
-
     <button id="theme-toggle" aria-label="Toggle Theme">🌓</button>
-
     <nav>
         <ul class="nav-links">
             <li><a href="#about">About</a></li>
@@ -230,11 +42,7 @@
     </nav>
 
     <header id="about" class="hero">
-        <img 
-            src="https://uploads.onecompiler.io/44h3cavtw/44h3kphmk/IMG_0953.JPG.jpeg" 
-            alt="Aryananda K" 
-            class="profile-img"
-        >
+        <img src="https://uploads.onecompiler.io/44h3cavtw/44h3kphmk/IMG_0953.JPG.jpeg" alt="Aryananda K" class="profile-img">
         <h1>Aryananda K</h1>
         <h2>Computer Science Student</h2>
         <p>A passionate developer focused on building clean, functional web applications.</p>
@@ -247,7 +55,7 @@
                 <h3>Book Resale Platform</h3>
                 <p>A marketplace for students to trade used textbooks efficiently.</p>
                 <a href="https://student-7169e.web.app" target="_blank" class="view-btn">view project</a>
-            </div>
+            </div>o
             <div class="project-card">
                 <h3>Personal Portfolio</h3>
                 <p>A modern, responsive portfolio featuring a custom dark mode toggle.</p>
@@ -272,26 +80,16 @@
             <a href="mailto:achuaryananda035@gmail.com">achuaryananda035@gmail.com</a>
             <a href="https://www.linkedin.com/in/aryananda-k-a2471237b" target="_blank">LinkedIn Profile</a>
         </div>
-        <p style="margin-top: 30px; font-size: 0.85rem; opacity: 0.7;">
-            &copy; 2026 Aryananda K. Built with Passion.
-        </p>
+        <p style="margin-top: 30px; font-size: 0.85rem; opacity: 0.7;">&copy; 2026 Aryananda K. Built with Passion.</p>
     </footer>
 
     <script>
-        const toggleBtn = document.getElementById('theme-toggle');
+        const btn = document.getElementById('theme-toggle');
         const root = document.documentElement;
-
-        /**
-         * Event listener to toggle between light and dark themes
-         */
-        toggleBtn.addEventListener('click', () => {
-            if (root.hasAttribute('data-theme')) {
-                root.removeAttribute('data-theme');
-                toggleBtn.innerText = '🌓';
-            } else {
-                root.setAttribute('data-theme', 'dark');
-                toggleBtn.innerText = '☀️';
-            }
+        btn.addEventListener('click', () => {
+            const isDark = root.hasAttribute('data-theme');
+            isDark ? root.removeAttribute('data-theme') : root.setAttribute('data-theme', 'dark');
+            btn.innerText = isDark ? '🌓' : '☀️';
         });
     </script>
 </body>
