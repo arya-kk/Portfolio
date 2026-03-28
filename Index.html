@@ -2,10 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta 
+        name="viewport" 
+        content="width=device-width, initial-scale=1.0"
+    >
     <title>Aryananda K | Portfolio</title>
+    
     <style>
-        /* --- General Reset & Variables --- */
+        /* ========================================
+           GENERAL RESET & CSS VARIABLES
+           ========================================
+        */
         * {
             margin: 0;
             padding: 0;
@@ -45,7 +52,10 @@
             text-align: center;
         }
 
-        /* --- Navigation --- */
+        /* ========================================
+           NAVIGATION STYLES
+           ========================================
+        */
         nav {
             background-color: var(--nav-bg);
             padding: 1rem;
@@ -74,7 +84,10 @@
             color: var(--btn-color);
         }
 
-        /* --- Hero Section --- */
+        /* ========================================
+           HERO SECTION
+           ========================================
+        */
         .hero {
             padding: 80px 20px;
             background-color: var(--hero-bg);
@@ -90,10 +103,21 @@
             box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         }
 
-        h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
-        h2 { font-size: 1.5rem; color: var(--btn-color); margin-bottom: 1rem; }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
 
-        /* --- Projects Section --- */
+        h2 {
+            font-size: 1.5rem;
+            color: var(--btn-color);
+            margin-bottom: 1rem;
+        }
+
+        /* ========================================
+           PROJECTS GRID
+           ========================================
+        */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -126,7 +150,10 @@
             margin-top: 15px;
         }
 
-        /* --- Skills --- */
+        /* ========================================
+           SKILLS SECTION
+           ========================================
+        */
         .skill-container {
             padding: 40px 20px;
             max-width: 800px;
@@ -143,7 +170,10 @@
             font-size: 0.9rem;
         }
 
-        /* --- Theme Toggle --- */
+        /* ========================================
+           UI ELEMENTS (Toggle & Footer)
+           ========================================
+        */
         #theme-toggle {
             position: fixed;
             bottom: 30px;
@@ -174,8 +204,15 @@
             font-weight: bold;
         }
 
+        /* ========================================
+           MEDIA QUERIES
+           ========================================
+        */
         @media (max-width: 600px) {
-            .nav-links li a { margin: 0 8px; font-size: 0.9rem; }
+            .nav-links li a {
+                margin: 0 8px;
+                font-size: 0.9rem;
+            }
         }
     </style>
 </head>
@@ -193,7 +230,11 @@
     </nav>
 
     <header id="about" class="hero">
-        <img src="https://uploads.onecompiler.io/44h3cavtw/44h3kphmk/IMG_0953.JPG.jpeg" alt="Aryananda K" class="profile-img">
+        <img 
+            src="https://uploads.onecompiler.io/44h3cavtw/44h3kphmk/IMG_0953.JPG.jpeg" 
+            alt="Aryananda K" 
+            class="profile-img"
+        >
         <h1>Aryananda K</h1>
         <h2>Computer Science Student</h2>
         <p>A passionate developer focused on building clean, functional web applications.</p>
@@ -205,40 +246,44 @@
             <div class="project-card">
                 <h3>Book Resale Platform</h3>
                 <p>A marketplace for students to trade used textbooks efficiently.</p>
-                <a href="https://student-7169e.web.app" target="_blank" class="view-btn">Live Demo</a>
+                <a href="https://student-7169e.web.app" target="_blank" class="view-btn">view project</a>
             </div>
             <div class="project-card">
                 <h3>Personal Portfolio</h3>
                 <p>A modern, responsive portfolio featuring a custom dark mode toggle.</p>
-                <a href="#" class="view-btn">View Code</a>
+                <a href="#" class="view-btn">View project</a>
             </div>
         </div>
     </section>
 
     <section id="skills" class="skill-container">
         <h2>Technical Skills</h2>
-        <div class="skill-tag">HTML5 / CSS3</div>
-        <div class="skill-tag">JavaScript (ES6+)</div>
+        <div class="skill-tag">HTML / CSS</div>
+        <div class="skill-tag">JavaScript</div>
         <div class="skill-tag">Python</div>
         <div class="skill-tag">C Programming</div>
-        <div class="skill-tag">Web Design</div>
-        <div class="skill-tag">Responsive Design</div>
+        
     </section>
 
     <footer id="contact">
         <h2>Get In Touch</h2>
         <div class="contact-links">
             <p>Ready to collaborate? Reach out via email or LinkedIn.</p>
-            <a href="mailto:aryananda@example.com">aryananda.k@example.com</a>
+            <a href="mailto:achuaryananda035@gmail.com">achuaryananda035@gmail.com</a>
             <a href="https://www.linkedin.com/in/aryananda-k-a2471237b" target="_blank">LinkedIn Profile</a>
         </div>
-        <p style="margin-top: 30px; font-size: 0.85rem; opacity: 0.7;">&copy; 2026 Aryananda K. Built with Passion.</p>
+        <p style="margin-top: 30px; font-size: 0.85rem; opacity: 0.7;">
+            &copy; 2026 Aryananda K. Built with Passion.
+        </p>
     </footer>
 
     <script>
         const toggleBtn = document.getElementById('theme-toggle');
         const root = document.documentElement;
 
+        /**
+         * Event listener to toggle between light and dark themes
+         */
         toggleBtn.addEventListener('click', () => {
             if (root.hasAttribute('data-theme')) {
                 root.removeAttribute('data-theme');
